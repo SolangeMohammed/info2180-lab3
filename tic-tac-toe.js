@@ -22,13 +22,9 @@ window.onload = function(){
         blocKGrid[i].addEventListener('click', handleClick, {once: true})
 
         const restartGame = document.querySelector('.btn')
-
         restartGame.onclick = () =>{
             window.location.reload();
-    
         }
-    
-       
     
         function handleClick(e){
             const cells = e.target
@@ -37,14 +33,12 @@ window.onload = function(){
             circleTurn =! circleTurn 
     
             if(winner(blocKGrid, currentClass)){
-                winMsg.classList.add('you-won'); 
-    
+                winMsg.classList.add('you-won');
             }
             // console.log('button clicked')
             // console.log(circleTurn)
         }
     
-        
         function winner(blocKGrid, currentClass){
             const winMsg= document.getElementById("status"); 
             for(i=0; i<winingCombo.length; i++){
@@ -54,18 +48,12 @@ window.onload = function(){
                     console.log(blocKGrid)
                     console.log(winingCombo)
                 }
-            }
-    
-         }  
-    
-        function placeXO(cells, currentClass)
-        {
+            }}  
+
+        function placeXO(cells, currentClass){
             cells.classList.add(currentClass)
-        }
-
-    }
+        }}
         
-
     for(let i=0; i<blocKGrid.length; i++){
         blocKGrid[i].addEventListener('mouseover', function(e){
             e.target.classList.add('hover');
@@ -74,7 +62,6 @@ window.onload = function(){
         blocKGrid[i].addEventListener('mouseout', function(e){
             e.target.classList.remove('hover');
         });
-    
     }
 
 
