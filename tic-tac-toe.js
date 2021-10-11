@@ -28,13 +28,6 @@ window.onload = function(){
     
         }
     
-    
-    
-    
-        // restartGame.onclick= () =>{
-        //     window.location.reload();
-        // }
-    
        
     
         function handleClick(e){
@@ -44,13 +37,11 @@ window.onload = function(){
             circleTurn =! circleTurn 
     
             if(winner(blocKGrid, currentClass)){
-                restartGame()
                 winMsg.classList.add('you-won'); 
-                console.log(winMsg)
     
             }
-            console.log('button clicked')
-            console.log(circleTurn)
+            // console.log('button clicked')
+            // console.log(circleTurn)
         }
     
         
@@ -59,7 +50,7 @@ window.onload = function(){
             for(i=0; i<winingCombo.length; i++){
                 if(blocKGrid[winingCombo[i][0]].innerHTML === currentClass && blocKGrid[winingCombo[i][0]].innerHTML === currentClass && blocKGrid[winingCombo[i][2]].innerHTML === currentClass){
                     winMsg.setAttribute("class", "you-won")
-                    winMsg.innerHTML= "Congratulations!"  +currentClass+  "is the Winner!"
+                    winMsg.innerHTML= "Congratulations!" +currentClass+ "is the Winner!"
                     console.log(blocKGrid)
                     console.log(winingCombo)
                 }
@@ -73,12 +64,7 @@ window.onload = function(){
         }
 
     }
-          
-    
-    
-    
-
-    
+        
 
     for(let i=0; i<blocKGrid.length; i++){
         blocKGrid[i].addEventListener('mouseover', function(e){
